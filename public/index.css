@@ -1,0 +1,10 @@
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form>div {
+    margin-bottom: 2vh;
+}

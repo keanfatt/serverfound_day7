@@ -1,0 +1,33 @@
+    {{!-- <style>
+        .center {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        }
+
+        form>div {
+            margin-bottom: 2vh;
+        }
+    </style> --}}
+  <h1>Search Movie Database</h1>
+
+        <form method="GET" action="/search" class="center" id="movieForm">
+
+            <div>
+                <label for="genre">Category:</label>
+                <select name="genre" id="genre" form="movieForm">
+                    {{#each categories}}
+                      <option value="{{this.category_id}}">{{this.name}}</option>
+                    {{/each}}
+                </select> 
+            </div>
+            <div>
+                <label for="q">Title:</label>
+                <input type="text" name="q" id="q" placeholder="Movie title" size="50" required>
+            </div>
+
+            <div>
+                <button type="submit">SEARCH</button>
+            </div>
+        </form>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Search</title>
+    </head>
+    <body>
+        {{#if noResult}}
+            <h2>Your query of '<code>{{ q }}</code>' returns no result</h2>
+        {{else}}
+            <h4>Number of records found: {{ count }}</h4>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Title</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each films}}
+                        <tr>
+                            <td>{{ @key }}</td>
+                            <td>{{ this.title }}</td>
+                            <td>{{ this.description }}</td>
+                        </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        {{/if}}
+    </body>
+</html>

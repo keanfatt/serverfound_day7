@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Movie Database</title>
+        <link rel="stylesheet" href="/index.css">
+    </head>
+    <body class="center">
+
+        <h1>Search Movie Database</h1>
+
+        <form method="GET" action="/search" class="center">
+
+            <div>
+                <label for="genre">Genre:</label>
+                <select id="genre">
+                  <option value="Internet Explorer">Internet Explorer</option>
+                  <option value="Firefox">Firefox</option>
+                  <option value="Chrome">Chrome</option>
+                  <option value="Opera">Opera</option>
+                  <option value="Safari">Safari</option>
+                  
+                </select> 
+            </div>
+            <div>
+                <label for="q">Title:</label>
+                <input type="text" name="q" id="q" placeholder="Movie title" size="50" required>
+            </div>
+
+            <div>
+                <button type="submit">SEARCH</button>
+            </div>
+        </form>
+        
+    </body>
+</html>
